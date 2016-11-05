@@ -1,0 +1,42 @@
+<ion-view view-title="">
+    <ion-content>
+
+        <!--        <ion-toggle ng-model="pushNotification.checked" ng-change="pushNotificationChange()">Notifications</ion-toggle>-->
+
+        <ion-scroll class="card">
+            <div ng-repeat="chat in chats">
+                <div class="col">
+                    <div ng-if="chat.creator == currentuser" class="bubble">
+                        <u>{{chat.creator}}:</u>
+                        <br> {{chat.message}}
+                    </div>
+                    <div ng-if="!(chat.creator == currentuser)" class="bubble bubble-alt green">
+                        <u>{{chat.creator}}:</u>
+                        <br> {{chat.message}}
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+        </ion-scroll>
+        <div class="card footer">
+            <div ng-show="!isLoggedIn" class="card">
+                <div class="item item-divider">
+                    Login To Post
+                </div>
+            </div>
+            <div ng-show="isLoggedIn" class="row">
+                <div class="col col-90">
+                    <label class="item item-input item-floating-label">
+
+                        <input type="text" placeholder="Type message" ng-model="messageObject.mesage">
+                    </label>
+                </div>
+                <div class="col">
+                    <i class="icon ion-android-send" style="font-size:30px;" ng-click="createChat()"></i>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

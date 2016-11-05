@@ -1,0 +1,25 @@
+<ion-view view-title="Treks">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="trek in treks" href="#/app/blogs/{{trek._id}}">
+                <div class="list card">
+                    <div class="item item-avatar">
+                        <h2>{{trek.title}}</h2>
+                        <p>{{trek.createdOn}}</p>
+                    </div>
+                    <div class="item item-image">
+                        <img src="/assets/image1.jpg" style="height:300px" class="">
+                    </div>
+                    <div class="item item-body">
+                        <p>
+                            {{trek.intro}}</p>
+                        <p>
+                            <a href="#" class="subdued">1 Like</a>
+                            <a href="#" class="subdued">5 Comments</a>
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

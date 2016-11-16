@@ -1,5 +1,5 @@
 app.factory('configservice', function () {
-    var prefix = "http://139.59.47.155:80/"
+    var prefix = "http://192.168.0.103:80/"
     return {
         'host':prefix,
         'loginURL': prefix + 'api/login',

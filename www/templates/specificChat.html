@@ -1,9 +1,12 @@
 <ion-view view-title="">
+      <ion-nav-title>
+    Chats
+  </ion-nav-title>
     <ion-content>
 
         <!--        <ion-toggle ng-model="pushNotification.checked" ng-change="pushNotificationChange()">Notifications</ion-toggle>-->
 
-        <ion-scroll class="card">
+        <ion-scroll class="card" ng-show="isLoggedIn">
             <div ng-repeat="chat in chats">
                 <div class="col">
                     <div ng-if="chat.creator == currentuser" class="bubble">
@@ -15,14 +18,13 @@
                         <br> {{chat.message}}
                     </div>
                     <br>
-
                 </div>
             </div>
         </ion-scroll>
         <div class="card footer">
-            <div ng-show="!isLoggedIn" class="card">
+            <div ng-show="!isLoggedIn">
                 <div class="item item-divider">
-                    <a href="/#app">Login To Post</a>
+                    Login To Post
                 </div>
             </div>
             <div ng-show="isLoggedIn" class="row">

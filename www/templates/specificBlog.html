@@ -1,14 +1,23 @@
-<ion-view view-title="">
-    <ion-content>
-        <div style="overflow:auto">
-            <h1>{{blog.title}}</h1>
-            <br> {{blog.intro}}
-            <br>
-            <div class="row">
-                <div class="col .col-90">
-                    <div ta-bind="text" ng-model="blog.description" ta-readonly='disabled'></div>
-                </div>
-            </div>
+<ion-view view-title="Title">
+  <ion-nav-buttons side="primary">
+    <a href="#/app/chats/trip/{{blog._id}}">
+        Chats
+    </a>
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    {{blog.title}}
+  </ion-nav-title>
+  <ion-content>
+    <div style="overflow:auto">
+      <!--<h1>{{blog.title}}</h1>-->
+      <br> {{blog.intro}}
+      <br>
+      <div class="row">
+        <div class="col .col-90">
+          <div ta-bind="text" ng-model="blog.description" ta-readonly='disabled'></div>
         </div>
-    </ion-content>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>

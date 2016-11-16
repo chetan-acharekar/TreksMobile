@@ -1,4 +1,4 @@
-app.controller('specificChatController', function ($scope, httpservice, $timeout, configservice, allEventService, $stateParams, $timeout, sharedservice, $ionicScrollDelegate, socket) {
+app.controller('specificChatController', function ($scope, httpservice, configservice, allEventService, $stateParams, $timeout, sharedservice, $ionicScrollDelegate, socket) {
     $scope.tripId = $stateParams.tripId;
     $scope.chats = [];
     $scope.messageObject = {};

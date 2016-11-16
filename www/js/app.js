@@ -82,7 +82,15 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
             }
         }
     })
-
+    .state('app.home', {
+        url: '/home',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/home.html',
+                controller: 'homeController'
+            }
+        }
+    })
     .state('app.specificChat', {
         url: '/chats/trip/:tripId',
         views: {
@@ -121,5 +129,5 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
         }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/blogs');
+    $urlRouterProvider.otherwise('/app/home');
 });

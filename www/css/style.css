@@ -4,3 +4,10 @@ img {
   width: 100% !important;
   height: auto !important;
 }
+
+  .pane {
+        background: url('/assets/background.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }

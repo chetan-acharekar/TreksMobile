@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngular', 'btford.socket-io'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngular', 'btford.socket-io','satellizer'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -22,7 +22,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
     });
 })
 
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider,$authProvider) {
     $stateProvider
 
         .state('app', {
@@ -130,4 +130,12 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
     });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/home');
+
+        // Google
+    $authProvider.google({
+        clientId: '930983681431-o1gr6t3ubvjefoi45ehijih08p6g95ma',
+        scope: ['profile', 'email'],
+        url: 'http://trekkingtoads.com/auth/google',
+    });
+
 });

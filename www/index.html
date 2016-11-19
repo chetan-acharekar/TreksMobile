@@ -2,13 +2,11 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
-
-    <link rel="manifest" href="manifest.json">
-
-    <!-- un-comment this code to enable service worker
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <link rel="manifest" href="manifest.json">
+  <!-- un-comment this code to enable service worker
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
@@ -16,52 +14,49 @@
           .catch(err => console.log('Error', err));
       }
     </script>-->
-
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bubble.css" rel="stylesheet">
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bubble.css" rel="stylesheet">
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
 
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-
-    <!--    CSS for text angular-->
-
-    <link rel='stylesheet' href='lib/textAngular/dist/textAngular.css'>
-    <script src='lib/textAngular/dist/textAngular-rangy.min.js'></script>
-    <script src='lib/textAngular/dist/textAngular-sanitize.min.js'></script>
-    <script src='lib/textAngular/dist/textAngular.min.js'></script>
-
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/controllers/loginCtrl.js"></script>
-    <script src="js/controllers/blogsCtrl.js"></script>
-    <script src="js/controllers/specifBlogCtrl.js"></script>
-    <script src="js/controllers/treksCtrl.js"></script>
-    <script src="js/controllers/chatsCtrl.js"></script>
-    <script src="js/controllers/specificChatCtrl.js"></script>
-    <script src="js/controllers/homeCtrl.js"></script>
-
-    <script src="js/services/http.js"></script>
-    <script src="js/services/config.js"></script>
-    <script src="js/services/shared.js"></script>
-    <script src="js/services/allEvents.js"></script>
-    <script src="js/services/socket.js"></script>
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  <!--    CSS for text angular-->
+  <link rel='stylesheet' href='lib/textAngular/dist/textAngular.css'>
+  <script src='lib/textAngular/dist/textAngular-rangy.min.js'></script>
+  <script src='lib/textAngular/dist/textAngular-sanitize.min.js'></script>
+  <script src='lib/textAngular/dist/textAngular.min.js'></script>
 
 
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-    <script src="lib/angular-socket-io/socket.js"></script>
+   <script src="https://cdn.jsdelivr.net/satellizer/0.15.5/satellizer.min.js"></script>
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/controllers/loginCtrl.js"></script>
+  <script src="js/controllers/blogsCtrl.js"></script>
+  <script src="js/controllers/specifBlogCtrl.js"></script>
+  <script src="js/controllers/treksCtrl.js"></script>
+  <script src="js/controllers/chatsCtrl.js"></script>
+  <script src="js/controllers/specificChatCtrl.js"></script>
+  <script src="js/controllers/homeCtrl.js"></script>
+  <script src="js/services/http.js"></script>
+  <script src="js/services/config.js"></script>
+  <script src="js/services/shared.js"></script>
+  <script src="js/services/allEvents.js"></script>
+  <script src="js/services/socket.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="lib/angular-socket-io/socket.js"></script>
 </head>
 
 <body ng-app="starter">
-    <ion-nav-view class="pane"></ion-nav-view>
+  <ion-nav-view class="pane"></ion-nav-view>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <ion-view view-title="Blogs">
   
   <ion-content>
-    <div class="list">
+    <div class="list" style="margin-top:5px; margin-left: 5px;margin-right: 5px;">
       <div ng-repeat="blog in blogs|orderBy:'-createdOn'">
         <a class="item item-thumbnail-lef" href="#/app/blogs/{{blog._id}}">
         <h2><b>{{blog.title}}</b></h2>

@@ -7,6 +7,8 @@
   "dependencies": {
     "textAngular": "^1.5.12",
     "socket.io": "^1.5.1",
-    "angular-socket-io": "^0.7.0"
+    "angular-socket-io": "^0.7.0",
+    "ngCordova": "^0.1.27-alpha",
+    "satellizer": "^0.15.5"
   }
 }

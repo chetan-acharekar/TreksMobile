@@ -1,5 +1,5 @@
 app.factory('configservice', function () {
-    var prefix = "http://139.59.47.155:80/"
+    var prefix = "http://trekkingtoads.com/"
     return {
         'host':prefix,
         'loginURL': prefix + 'api/login',

@@ -10,6 +10,7 @@ app.factory('configservice', function () {
         'uploadImage': prefix + 'api/image',
         'allImageTags': prefix + 'api/image/distinct/tag',
         'socketserver': prefix,
-        'updateDeviceToken': prefix + 'api/notification/updateToken'
+        'updateDeviceToken': prefix + 'api/notification/updateToken',
+        'logCount':prefix + 'api/log/count'
     }
 });

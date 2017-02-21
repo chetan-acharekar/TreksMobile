@@ -1,0 +1,15 @@
+<ion-view view-title="Treks">
+  <ion-content>
+    <div class="list" style="margin-top:5px; margin-left: 5px;margin-right: 5px;">
+      <div ng-repeat="trek in treks|orderBy:'-createdOn'">
+        <a class="item item-thumbnail-lef" href="#/app/treks/{{trek._id}}">
+          <h2><b>{{trek.title}}</b></h2>
+          <img ng-src="{{host}}uploads/{{trek.image}}">
+          <br> {{trek.intro}}
+        </a>
+        <br>
+        <br>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

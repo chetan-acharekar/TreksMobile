@@ -4,138 +4,147 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngular', 'btford.socket-io','satellizer'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngular', 'btford.socket-io', 'satellizer'])
 
-.run(function ($ionicPlatform) {
+  .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
-        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-        // for form inputs)
-        if (window.cordova && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-            cordova.plugins.Keyboard.disableScroll(true);
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.plugins.Keyboard.disableScroll(true);
 
-        }
-        if (window.StatusBar) {
-            // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
-        }
+      }
+      if (window.StatusBar) {
+        // org.apache.cordova.statusbar required
+        StatusBar.styleDefault();
+      }
     });
-})
+  })
 
-.config(function ($stateProvider, $urlRouterProvider,$authProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
     $stateProvider
 
-        .state('app', {
+      .state('app', {
         url: '/app',
         abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'loginController'
-    })
+      })
 
-    .state('app.blogs', {
+      .state('app.blogs', {
         url: '/blogs',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/blogs.html',
-                controller: 'blogsController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/blogs.html',
+            controller: 'blogsController'
+          }
         }
-    })
+      })
 
 
-    .state('app.specificblog', {
+      .state('app.specificblog', {
         url: '/blogs/:blogId',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/specificBlog.html',
-                controller: 'specificBlogController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/specificBlog.html',
+            controller: 'specificBlogController'
+          }
         }
-    })
+      })
 
-    .state('app.treks', {
+      .state('app.treks', {
         url: '/treks',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/treks.html',
-                controller: 'treksController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/treks.html',
+            controller: 'treksController'
+          }
         }
-    })
+      })
+      .state('app.pasttreks', {
+        url: '/pasttreks',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/pastTreks.html',
+            controller: 'pastTreksController'
+          }
+        }
+      })
 
-    .state('app.specifictrek', {
+      .state('app.specifictrek', {
         url: '/treks/:blogId',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/specificBlog.html',
-                controller: 'specificBlogController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/specificBlog.html',
+            controller: 'specificBlogController'
+          }
         }
-    })
+      })
 
-    .state('app.chats', {
+      .state('app.chats', {
         url: '/chats',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/chats.html',
-                controller: 'chatsController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/chats.html',
+            controller: 'chatsController'
+          }
         }
-    })
-    .state('app.home', {
+      })
+      .state('app.home', {
         url: '/home',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/home.html',
-                controller: 'homeController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/home.html',
+            controller: 'homeController'
+          }
         }
-    })
-    .state('app.specificChat', {
+      })
+      .state('app.specificChat', {
         url: '/chats/trip/:tripId',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/specificChat.html',
-                controller: 'specificChatController'
-            }
+          'menuContent': {
+            templateUrl: 'templates/specificChat.html',
+            controller: 'specificChatController'
+          }
         }
-    })
+      })
 
-    .state('app.browse', {
-            url: '/browse',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/browse.html'
-                }
-            }
-        })
-        .state('app.playlists', {
-            url: '/playlists',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/playlists.html',
-                    controller: 'PlaylistsCtrl'
-                }
-            }
-        })
+      .state('app.browse', {
+        url: '/browse',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/browse.html'
+          }
+        }
+      })
+      .state('app.playlists', {
+        url: '/playlists',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/playlists.html',
+            controller: 'PlaylistsCtrl'
+          }
+        }
+      })
 
-    .state('app.single', {
+      .state('app.single', {
         url: '/playlists/:playlistId',
         views: {
-            'menuContent': {
-                templateUrl: 'templates/playlist.html',
-                controller: 'PlaylistCtrl'
-            }
+          'menuContent': {
+            templateUrl: 'templates/playlist.html',
+            controller: 'PlaylistCtrl'
+          }
         }
-    });
+      });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/home');
 
-        // Google
+    // Google
     $authProvider.google({
-        clientId: '930983681431-o1gr6t3ubvjefoi45ehijih08p6g95ma',
-        scope: ['profile', 'email'],
-        url: 'http://trekkingtoads.com/auth/google',
+      clientId: '930983681431-o1gr6t3ubvjefoi45ehijih08p6g95ma',
+      scope: ['profile', 'email'],
+      url: 'http://trekkingtoads.com/auth/google',
     });
 
-});
+  });

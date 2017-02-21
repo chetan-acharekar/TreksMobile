@@ -1,7 +1,11 @@
 <ion-view view-title="Treks">
   <ion-content>
     <div class="list" style="margin-top:5px; margin-left: 5px;margin-right: 5px;">
-      <div ng-repeat="trek in treks|orderBy:'-createdOn'">
+      <div class="row" ng-show="treks.length == 0">
+        <br>
+        <br> Ohhh, Looks like we Dont have any trek right now. Message us on facebok and we will try to arrange one for you!
+      </div>
+      <div ng-repeat="trek in treks|orderBy:'-createdOn'" ng-show="!treks.length == 0">
         <a class="item item-thumbnail-lef" href="#/app/treks/{{trek._id}}">
           <h2><b>{{trek.title}}</b></h2>
           <img ng-src="{{host}}uploads/{{trek.image}}">

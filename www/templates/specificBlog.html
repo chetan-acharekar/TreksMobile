@@ -16,7 +16,8 @@
       <br>
       <div class="row">
         <div class="col .col-90">
-          <div ta-bind="text" ng-model="blog.description" ta-readonly='disabled'></div>
+          <div ng-bind-html="blog.description"></div>
+          <!--<div ta-bind="text" ng-model="blog.description" ta-readonly='disabled'></div>-->
         </div>
       </div>
     </div>

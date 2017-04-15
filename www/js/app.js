@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngular', 'btford.socket-io', 'satellizer'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'btford.socket-io', 'satellizer'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -38,6 +38,16 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
           'menuContent': {
             templateUrl: 'templates/blogs.html',
             controller: 'blogsController'
+          }
+        }
+      })
+
+      .state('app.home', {
+        url: '/home',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/home.html',
+            controller: 'homeController'
           }
         }
       })
@@ -88,15 +98,6 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
           'menuContent': {
             templateUrl: 'templates/chats.html',
             controller: 'chatsController'
-          }
-        }
-      })
-      .state('app.home', {
-        url: '/home',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/home.html',
-            controller: 'homeController'
           }
         }
       })

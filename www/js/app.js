@@ -54,7 +54,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
 
 
       .state('app.specificblog', {
-        url: '/blogs/:blogId',
+        url: '/blogs/:blogId/:slug',
         views: {
           'menuContent': {
             templateUrl: 'templates/specificBlog.html',
@@ -83,7 +83,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'textAngula
       })
 
       .state('app.specifictrek', {
-        url: '/treks/:blogId',
+        url: '/treks/:blogId/:slug',
         views: {
           'menuContent': {
             templateUrl: 'templates/specificBlog.html',

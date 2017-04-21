@@ -3,7 +3,7 @@
   <ion-content>
     <div class="list" style="margin-top:5px; margin-left: 5px;margin-right: 5px;">
       <div ng-repeat="blog in blogs|orderBy:'-createdOn'">
-        <a class="item item-thumbnail-lef" href="#/app/blogs/{{blog._id}}">
+        <a class="item item-thumbnail-lef" href="#/app/blogs/{{blog._id}}/{{blog.slug}}">
         <h2><b>{{blog.title}}</b></h2>
           <img ng-src="{{host}}uploads/{{blog.image}}">
           <br>
